@@ -9,7 +9,11 @@ export default function Home() {
         <title>Heycar Schema QA App</title>
         <meta
           name='description'
-          content='This is an app to QA some of the schema functionalities'
+          content='This is a Heycar QA app to go through schema functionalities and potential options.'
+        />
+        <meta
+          name='keywords'
+          content='heycar, heycar testing, heycar testing app, heycar schema qa, heycar qa, heycar qa app'
         />
         <meta
           name='google-site-verification'

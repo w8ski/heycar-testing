@@ -7,7 +7,7 @@ import Logo from "../src/assets/images/logo.svg";
 const SCHEMA = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  url: "https://www.heycar.co.uk/",
+  url: "https://heycar-testing.vercel.app/",
   potentialAction: {
     "@type": "SearchAction",
     target: "https://google.com?q={search_term_string}",

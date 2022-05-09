@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
+        <html lang='en' />
         <title>Heycar Schema QA App</title>
         <meta
           name='description'
@@ -17,11 +18,15 @@ export default function Home() {
           name='keywords'
           content='heycar, heycar testing, heycar testing app, heycar schema qa, heycar qa, heycar qa app'
         />
+        <meta name='robots' content='all' />
+        <meta name='author' content='Simon Wierzchowski' />
+        <meta name='publisher' content='Heycar' />
         <meta
           name='google-site-verification'
           content='61F24J4tCWIp9xpsAi43zy8uc1CkP-2Hv4hpByMf_GI'
         />
         <link rel='icon' href='/favicon.ico' />
+        <link rel='canonical' href='https://heycar.co.uk' />
         <script type='application/ld+json'>{`
           {
             "@context": "http://schema.org",

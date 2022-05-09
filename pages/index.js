@@ -26,7 +26,7 @@ export default function Home() {
           content='61F24J4tCWIp9xpsAi43zy8uc1CkP-2Hv4hpByMf_GI'
         />
         <link rel='icon' href='/favicon.ico' />
-        <link rel='canonical' href='https://heycar.co.uk' />
+        <link rel='canonical' href='https://heycar-testing.vercel.app/' />
         <script type='application/ld+json'>{`
           {
             "@context": "http://schema.org",

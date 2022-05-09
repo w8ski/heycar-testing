@@ -4,6 +4,17 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Logo from "../src/assets/images/logo.svg";
 
+const SCHEMA = {
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  url: "https://www.heycar.co.uk/",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://google.com?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function Home() {
   return (
     <div>
@@ -27,23 +38,15 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
         <link rel='canonical' href='https://heycar-testing.vercel.app/' />
-        <script type='application/ld+json'>{`
-          {
-            "@context": "http://schema.org",
-            "@type": "WebSite",
-            "url": "https://www.heycar.co.uk/",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://google.com?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          }
-        `}</script>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }}
+        />
       </Head>
 
       <header className={styles.header}>
         <a href='https://heycar.co.uk'>
-          <Image src={Logo} alt='heycar logo' height='100' width='150' />
+          <Image src={Logo} alt='heycar logo' title='Heycar logo' height='100' width='150' />
         </a>
       </header>
 

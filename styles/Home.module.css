@@ -2,8 +2,14 @@
   padding: 0 2rem;
 }
 
+.header {
+  background: #c0e6ff;
+  display: flex;
+  padding: 0 2rem;
+}
+
 .main {
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -29,7 +35,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #052962;
   text-decoration: none;
 }
 
@@ -104,7 +110,7 @@
 }
 
 .logo {
-  height: 1em;
+  color: #00cea5;
   margin-left: 0.5rem;
 }
 

@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+
 import styles from "../styles/Home.module.css";
+import Logo from "../src/assets/images/logo.svg";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Heycar Schema QA App</title>
         <meta
@@ -34,22 +36,24 @@ export default function Home() {
         `}</script>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <br />
-          <a href='https://heycar.co.uk'>Heycar</a> Testing App.
-        </h1>
-      </main>
+      <header className={styles.header}>
+        <a href='https://heycar.co.uk'>
+          <Image src={Logo} alt='heycar logo' height='100' width='150' />
+        </a>
+      </header>
+
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            Welcome to <br />
+            <a href='https://heycar.co.uk'>Heycar</a> Schema App.
+          </h1>
+        </main>
+      </div>
 
       <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
+        <a href='https://github.com/w8ski' target='_blank' rel='noopener noreferrer'>
+          Designed and Developed by <span className={styles.logo}>Simon (w8ski) Wierzchowski</span>
         </a>
       </footer>
     </div>

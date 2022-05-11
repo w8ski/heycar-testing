@@ -1,7 +1,6 @@
 import Head from "next/head";
 
-import styles from "../styles/Home.module.css";
-
+import styles from "../src/assets/styles/Home.module.css";
 import { Layout } from "../src/components/Layout/Layout";
 
 const SCHEMA = {

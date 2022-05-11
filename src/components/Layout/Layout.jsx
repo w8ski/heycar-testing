@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import Logo from "../../assets/images/logo.svg";
-import styles from "../../../styles/Home.module.css";
+import styles from "../../assets/styles/Home.module.css";
 
 const Layout = ({ children }) => (
   <div>

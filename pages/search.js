@@ -4,11 +4,9 @@ const Search = ({ results }) => (
   <Layout>
     <h1>Results:</h1>
     {results.map((result, idx) => (
-      <div key={result.title}>
+      <div key={result.query}>
         <h1>
-          {idx + 1}. {result.title}
-          <br />
-          <small>{result.query}</small>
+          {idx + 1}. {result.query}
         </h1>
       </div>
     ))}

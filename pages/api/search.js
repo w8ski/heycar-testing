@@ -1,9 +1,11 @@
+import { capitalize } from "../../src/utils/capitalize";
+
 export default function handler(req, res) {
   const { q } = req.query;
   const results = [
     {
       title: "Hello World",
-      query: q,
+      query: capitalize(q),
     },
   ];
   res.statusCode = 200;

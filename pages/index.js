@@ -1,23 +1,23 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
-import Logo from "../src/assets/images/logo.svg";
+
+import { Layout } from "../src/components/Layout/Layout";
 
 const SCHEMA = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  url: "https://heycar-testing.vercel.app/",
+  url: process.env.HOST,
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://heycar-testing.vercel.app?q={search_term_string}",
+    target: `${process.env.HOST}/api/search?q={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 };
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <Head>
         <html lang='en' />
         <title>Heycar Schema QA App</title>
@@ -37,33 +37,16 @@ export default function Home() {
           content='61F24J4tCWIp9xpsAi43zy8uc1CkP-2Hv4hpByMf_GI'
         />
         <link rel='icon' href='/favicon.ico' />
-        <link rel='canonical' href='https://heycar-testing.vercel.app/' />
+        <link rel='canonical' href={process.env.HOST} />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }}
         />
       </Head>
-
-      <header className={styles.header}>
-        <a href='https://heycar.co.uk'>
-          <Image src={Logo} alt='heycar logo' title='Heycar logo' height='100' width='150' />
-        </a>
-      </header>
-
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <br />
-            <a href='https://heycar.co.uk'>Heycar</a> Schema App.
-          </h1>
-        </main>
-      </div>
-
-      <footer className={styles.footer}>
-        <a href='https://github.com/w8ski' target='_blank' rel='noopener noreferrer'>
-          Designed and Developed by <span className={styles.logo}>Simon (w8ski) Wierzchowski</span>
-        </a>
-      </footer>
-    </div>
+      <h1 className={styles.title}>
+        Welcome to <br />
+        <a href='https://heycar.co.uk'>Heycar</a> Schema App.
+      </h1>
+    </Layout>
   );
 }
